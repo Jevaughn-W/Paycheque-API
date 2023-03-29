@@ -1,15 +1,15 @@
 // Server start-up dependencies
+const express = require('express');
+const app = express();
 const PORT = 8080;
-const http = require('http');
 
-const serverResponse = (request, response) => {
-  response.writeHead(200, {"Content-Type": "text/plain"});
-  response.end("Hello World\n");
-}
-
-const server = http.createServer(serverResponse);
+// Define first route and server response
+app.get('/', (req, res) => {
+  res.send('Hello World');
+});
 
 
-server.listen(PORT, () => {
+// Start the server and log that it's running
+app.listen(PORT, () => {
   console.log(`Listening on port ${PORT}`);
 });
