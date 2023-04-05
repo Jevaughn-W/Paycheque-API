@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node src/index.js",
-    "db:reset": "psql -U development -d taxapp < ./src/db/schema/create.sql"
+    "db:reset": "psql -U development -d taxapp < ./src/db/schema/create.sql && psql -U development -d taxapp < ./src/db/schema/seeds.sql" 
   },
   "repository": {
     "type": "git",
