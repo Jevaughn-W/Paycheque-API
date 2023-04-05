@@ -1,7 +1,7 @@
 INSERT INTO provinces (name)
   VALUES 
-    (Ontario),
-    (Quebec);
+    ('Ontario'),
+    ('Quebec');
 
 INSERT INTO users (name, email, password, province_id, salary)
   VALUES
@@ -19,8 +19,8 @@ INSERT INTO rates (rate)
 
 INSERT INTO salaries (province_id, rate_id, salary)
   VALUES
-    (1, 1, 46226)
-    (1, 2, 46226)
+    (1, 1, 46226),
+    (1, 2, 46226),
     (1, 3, 150000),
     (2, 4, 49275),
     (2, 5, 98540),
